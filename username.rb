@@ -28,7 +28,16 @@ def check_privilege(id=0)
 end
 
 # Problem 4 STRETCH
-
+def generate_username4(fn, ln, birth, id=0)
+	user = generate_username3(fn, ln, birth)
+	temp = ["user", "seller", "manager", "admin"]
+	privilege = Hash.new
+	temp.each { |item| privilege[temp.rindex(item)] = item }
+	unless id == 0
+		return privilege[id] + "-" + user
+	end
+	return user
+end
 # Problem 5
 $users = {}
 
@@ -37,7 +46,7 @@ def generate_username5(fn, ln, birth)
 		if !($users[user])
 			$users[user] = 0
 			return user
-		else 
+		else
 			$users[user] += 1
 			return user + "_" + $users[user].to_s
 	end
