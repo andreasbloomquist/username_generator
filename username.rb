@@ -27,6 +27,8 @@ def check_privilege(id=0)
 	return privilege[id]
 end
 
+# Problem 4 STRETCH
+
 # Problem 5
 $users = {}
 
@@ -41,10 +43,13 @@ def generate_username5(fn, ln, birth)
 	end
 end
 
-puts "Enter your first name: "
-first_name = gets.chomp
-puts "Enter your last name: "
-last_name = gets.chomp
-puts "What year were you born? (ex:  1989)"
-birth = gets.chomp
-puts "Your user name is " + generate_username5(first_name, last_name, birth)
+# Problem 6
+# I had to temporarily comment this out to run the tests
+
+# puts "Enter your first name: "
+# first_name = gets.chomp
+# puts "Enter your last name: "
+# last_name = gets.chomp
+# puts "What year were you born? (ex:  1989)"
+# birth = gets.chomp
+# puts "Your user name is " + generate_username5(first_name, last_name, birth)
